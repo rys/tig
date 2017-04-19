@@ -1,0 +1,11 @@
+<xen:if is="{$thread.tagsList}">
+	<xen:foreach loop="$thread.tagsList" value="$tag">
+		<xen:set var="$tig">{$tag.tag}</xen:set>
+		<xen:set var="$tig_tag">{xen:helper tigtag, $tig}</xen:set>
+		<xen:if is="{$tig_tag} != 'TechInGames_TagNotFound'">
+			<xen:if is="{$tig_tag} != ''">
+				<iframe src="https://www.techingames.net/embed?id={$tig_tag}&display=GameRow" width="100%" frameborder="0" scrolling="no"></iframe>
+			</xen:if>	
+		</xen:if>
+	</xen:foreach>
+</xen:if>
